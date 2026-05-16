@@ -3,7 +3,6 @@
 import dynamic from 'next/dynamic'
 import { GlassNav } from '@/components/ui/glass-nav'
 import { MagneticButton } from '@/components/ui/magnetic-button'
-import { AnimatedGrid } from '@/components/ui/animated-grid'
 import { HolographicCard } from '@/components/ui/holographic-card'
 import { KineticText, GlitchText } from '@/components/ui/kinetic-text'
 import { CursorGlow } from '@/components/ui/cursor-glow'
@@ -46,8 +45,14 @@ const CubeScene = dynamic(
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#000000] text-white overflow-x-hidden">
-      {/* Background Effects */}
-      <AnimatedGrid />
+      {/* Background Grid */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          background: 'linear-gradient(rgba(99,102,241,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.03) 1px, transparent 1px)',
+          backgroundSize: '60px 60px'
+        }}
+      />
       <CursorGlow />
 
       {/* Navigation */}
